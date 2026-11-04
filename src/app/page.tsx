@@ -41,85 +41,103 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="bg-slate-50 text-slate-800 selection:bg-amber-500 selection:text-white">
-      {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-sky-950 text-white pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-sky-900/30">
-        {/* Glow ambient background elements */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-sky-500/10 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute top-12 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* HERO SECTION - EYE-CATCHING BACKGROUND IMAGE & CALL-FOCUSED CTA */}
+      <section className="relative overflow-hidden min-h-[580px] sm:min-h-[640px] flex items-center justify-center text-white py-20 lg:py-28 border-b border-sky-900/40">
+        {/* Background Image of Dryer Vent Cleaning */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-dryer-vent.jpg"
+            alt="Dryer vent cleaning background"
+            fill
+            className="object-cover object-center filter brightness-[0.75] contrast-[1.1]"
+            priority
+            sizes="100vw"
+          />
+          {/* High-Contrast Gradient Overlay for Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/85 to-slate-900/80" />
+          <div className="absolute inset-0 bg-radial-at-c from-transparent via-slate-950/40 to-slate-950/90" />
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
-                <Flame className="w-4 h-4 text-amber-400 animate-pulse" />
-                <span>Midlothian&apos;s #1 Dryer Fire Prevention & Airflow Specialists</span>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
+          {/* Top Urgent Emergency Pill */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/20 border-2 border-amber-400/50 text-amber-300 text-xs sm:text-sm font-extrabold uppercase tracking-wider backdrop-blur-md shadow-lg shadow-amber-500/10">
+            <Flame className="w-4 h-4 text-amber-400 animate-pulse" />
+            <span>★ 24/7 EMERGENCY &amp; SAME-DAY DRYER VENT CLEANING IN MIDLOTHIAN, TX</span>
+          </div>
+
+          {/* Main Hero Headline */}
+          <div className="space-y-3">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.08] drop-shadow-md">
+              Fast, Professional{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-sky-400">
+                Dryer Vent Cleaning
+              </span>{' '}
+              in Midlothian, TX
+            </h1>
+            <p className="text-lg sm:text-2xl text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed drop-shadow">
+              Prevent dangerous house fires, cut drying times in half, and lower electric bills. Certified local technicians ready for immediate dispatch across Ellis County.
+            </p>
+          </div>
+
+          {/* Trust Value Checklist */}
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm font-bold text-slate-200 pt-2">
+            <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              100% Satisfaction Guaranteed
+            </span>
+            <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              NFPA 211 Safety Certified
+            </span>
+            <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              Zero Hidden Trip Fees
+            </span>
+            <span className="flex items-center gap-1.5 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              Free Estimates Over Phone
+            </span>
+          </div>
+
+          {/* EYE-CATCHING HERO CALL CTA (SINGLE CONVERSION FOCUS) */}
+          <div className="pt-4 flex flex-col items-center justify-center gap-3">
+            <a
+              href={`tel:${SITE_INFO.phone}`}
+              className="group relative inline-flex items-center justify-center gap-4 sm:gap-5 px-8 py-5 sm:px-12 sm:py-6 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500 hover:from-amber-400 hover:to-orange-500 text-slate-950 font-black text-2xl sm:text-4xl shadow-2xl shadow-amber-500/50 hover:scale-105 transition-all duration-200 border-4 border-amber-300 animate-glow"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-slate-950 text-amber-400 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <Phone className="w-6 h-6 sm:w-7 sm:h-7 animate-bounce" />
               </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
-                Dryer Vent Cleaning Near You in{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-amber-400">
-                  Midlothian, TX
-                </span>
-              </h1>
-
-              <p className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
-                Is your dryer taking two or more cycles to dry a single load of towels? Trapped combustible lint in your exhaust duct poses a serious fire hazard and drives up Texas energy bills. Connect with certified local technicians offering complete rotary mechanical brush cleaning, video camera inspection, and digital airflow testing across Midlothian and Ellis County.
-              </p>
-
-              {/* Verified Trust Badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-                <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5">
-                  <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
-                  <span className="text-xs font-semibold text-slate-200">NFPA 211 Code Compliant</span>
+              <div className="text-left">
+                <div className="text-[11px] sm:text-xs uppercase tracking-widest font-black text-slate-950 opacity-90 leading-tight">
+                  TAP TO CALL NOW • INSTANT DISPATCH
                 </div>
-                <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5">
-                  <Zap className="w-5 h-5 text-amber-400 shrink-0" />
-                  <span className="text-xs font-semibold text-slate-200">Same-Day Rapid Dispatch</span>
-                </div>
-                <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 col-span-2 sm:col-span-1">
-                  <Star className="w-5 h-5 text-amber-400 fill-amber-400 shrink-0" />
-                  <span className="text-xs font-semibold text-slate-200">4.9/5 Star Local Rating</span>
+                <div className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight leading-none">
+                  {SITE_INFO.phoneFormatted}
                 </div>
               </div>
+            </a>
 
-              {/* Immediate Phone CTA */}
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-                <a
-                  href={`tel:${SITE_INFO.phone}`}
-                  className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-black text-lg shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call {SITE_INFO.phoneFormatted}</span>
-                </a>
-
-                <a
-                  href="#quote-form"
-                  className="flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-sky-900/60 hover:bg-sky-800/80 border border-sky-400/30 text-white font-bold text-base transition-all"
-                >
-                  <span>Request Online Quote</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-
-              {/* Internal Anchor Link Requirement 1 */}
-              <div className="pt-2 text-xs text-slate-400 flex flex-wrap items-center gap-x-2 gap-y-1">
-                <span>Looking for specific local service? Explore our</span>
-                <InternalLink href="/services/dryer-vent-cleaning">
-                  residential dryer vent cleaning
-                </InternalLink>
-                <span>or view</span>
-                <InternalLink href="/locations/midlothian-tx">
-                  dryer vent cleaning in Midlothian, TX
-                </InternalLink>
-                <span>neighborhood service.</span>
-              </div>
+            <div className="text-xs sm:text-sm text-slate-300 font-semibold flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+              <span>Technicians on duty now in Midlothian • Fast 20-Minute Local Dispatch</span>
             </div>
+          </div>
 
-            {/* Right Interactive Form Column */}
-            <div id="quote-form" className="lg:col-span-5 scroll-mt-24">
-              <QuoteForm initialService="dryer-vent-cleaning" initialLocation="midlothian-tx" />
-            </div>
+          {/* Internal Anchor Links */}
+          <div className="pt-4 text-xs text-slate-300 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            <span>Explore our</span>
+            <InternalLink href="/services/dryer-vent-cleaning">
+              residential dryer vent cleaning
+            </InternalLink>
+            <span>or view</span>
+            <InternalLink href="/locations/midlothian-tx">
+              dryer vent cleaning in Midlothian, TX
+            </InternalLink>
+            <span>and</span>
+            <InternalLink href="#quote-form">
+              request an online quote below
+            </InternalLink>.
           </div>
         </div>
       </section>
@@ -692,6 +710,27 @@ export default function HomePage() {
                 <div className="text-xs text-slate-500">Property Manager, Ellis County TX</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DEDICATED ESTIMATE & QUOTE SECTION AT BOTTOM */}
+      <section id="quote-form" className="py-16 sm:py-20 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white scroll-mt-24 border-y border-slate-800">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3.5 py-1.5 rounded-full border border-amber-400/20">
+              Free No-Obligation Pricing
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+              Request Your Free Dryer Vent Estimate Online
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base">
+              Prefer to book online? Submit your project details below and a certified Midlothian technician will call you within 15 minutes.
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <QuoteForm initialService="dryer-vent-cleaning" initialLocation="midlothian-tx" />
           </div>
         </div>
       </section>

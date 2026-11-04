@@ -107,7 +107,7 @@ export const Header: React.FC = () => {
                     : 'text-slate-700 hover:text-sky-600 hover:bg-slate-50'
                 }`}
               >
-                <span>Services (9)</span>
+                <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
               </Link>
 
@@ -287,7 +287,7 @@ export const Header: React.FC = () => {
               pathname.startsWith('/services') ? 'text-sky-600 bg-sky-50' : 'text-slate-800'
             }`}
           >
-            All Services (9 Sub-Pages)
+            Services
           </Link>
           <div className="pl-4 space-y-1 pb-2">
             {SERVICES_LIST.slice(0, 5).map((s) => (
