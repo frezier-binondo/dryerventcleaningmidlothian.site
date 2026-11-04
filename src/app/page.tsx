@@ -154,8 +154,8 @@ export default function HomePage() {
           <div className="lg:col-span-6 relative">
             <div className="relative h-[440px] sm:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <Image
-                src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=1200&q=80"
-                alt="Professional laundry room dryer vent cleaning in Midlothian Texas"
+                src="/images/technician-inspecting-dryer-vent.jpg"
+                alt="Certified dryer vent technician inspecting ventilation duct in Midlothian TX"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -217,6 +217,109 @@ export default function HomePage() {
               or check our full list of{' '}
               <InternalLink href="/services">dryer vent services in Ellis County</InternalLink>.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* REAL FIELD WORK & APPARATUS SHOWCASE */}
+      <section className="py-12 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">
+              Real Work • Real Equipment • Real Results
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+              See What Happens Inside Your Midlothian Dryer Vent
+            </h2>
+            <p className="text-slate-300 text-sm">
+              Authentic diagnostic photos of heavy lint blockages and certified mechanical rotary cleaning tools deployed in local homes.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 shadow-xl group">
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src="/images/severely-clogged-dryer-duct.jpg"
+                  alt="Severely clogged dryer vent duct packed with dense lint"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute top-3 left-3 bg-rose-600 text-white text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow">
+                  Extreme Hazard
+                </div>
+              </div>
+              <div className="p-4 space-y-1">
+                <h4 className="font-bold text-white text-sm">Dense Lint Restriction</h4>
+                <p className="text-xs text-slate-300">
+                  Inside of a choked exhaust duct in an Ellis County home before rotary extraction.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 shadow-xl group">
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src="/images/rotary-brush-cleaning-duct.jpg"
+                  alt="Rotary bristle brush scouring inside flexible aluminum dryer vent duct"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute top-3 left-3 bg-sky-600 text-white text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow">
+                  Rotary Agitation
+                </div>
+              </div>
+              <div className="p-4 space-y-1">
+                <h4 className="font-bold text-white text-sm">Mechanical Brush System</h4>
+                <p className="text-xs text-slate-300">
+                  Spinning multi-bristle whip cleans 100% of duct walls without damaging joints.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 shadow-xl group">
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src="/images/technician-cleaning-exterior-vent.jpg"
+                  alt="Technician cleaning exterior dryer vent wall hood with rotary rod"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow">
+                  Exterior Scouring
+                </div>
+              </div>
+              <div className="p-4 space-y-1">
+                <h4 className="font-bold text-white text-sm">Outdoor Hood Clearing</h4>
+                <p className="text-xs text-slate-300">
+                  Clearing dampers and back-flushing lint plugs through outdoor exterior termination.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 shadow-xl group">
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image
+                  src="/images/technician-inspecting-dryer-vent.jpg"
+                  alt="Technician inspecting wall duct with diagnostic flashlight"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute top-3 left-3 bg-amber-500 text-slate-950 text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow">
+                  Safety Inspection
+                </div>
+              </div>
+              <div className="p-4 space-y-1">
+                <h4 className="font-bold text-white text-sm">Internal Collar Scope</h4>
+                <p className="text-xs text-slate-300">
+                  Verifying clean airflow, proper seal integrity, and zero thermal leakage behind dryer.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
