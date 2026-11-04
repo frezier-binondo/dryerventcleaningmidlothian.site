@@ -154,8 +154,8 @@ export default function HomePage() {
           <div className="lg:col-span-6 relative">
             <div className="relative h-[440px] sm:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <Image
-                src="/images/technician-inspecting-dryer-vent.jpg"
-                alt="Certified dryer vent technician inspecting ventilation duct in Midlothian TX"
+                src="/images/hero-dryer-vent.jpg"
+                alt="Certified dryer vent technician performing full ventilation cleaning in Midlothian TX"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
