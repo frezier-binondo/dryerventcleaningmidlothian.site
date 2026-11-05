@@ -7,8 +7,8 @@ import { SITE_INFO } from '@/data/siteData';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.domain),
   title: {
-    default: 'Dryer Vent Cleaning Midlothian TX | Top-Rated Fire Prevention & Lint Removal',
-    template: '%s | Dryer Vent Cleaning Midlothian',
+    default: 'Dryer Vent Cleaning Midlothian TX',
+    template: '%s',
   },
   description:
     'Professional dryer vent cleaning in Midlothian, TX and Ellis County. Prevent dryer fires, eliminate heavy lint clogs, and cut drying times. Free same-day quotes: (469) 336-3767.',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE_INFO.domain,
     siteName: SITE_INFO.name,
-    title: 'Dryer Vent Cleaning Midlothian TX | Professional Service & Fast Quotes',
+    title: 'Dryer Vent Cleaning Midlothian TX',
     description:
       'Keep your home safe from dryer fires and restore fast drying cycles with certified dryer vent cleaning in Midlothian, TX. Fast scheduling, rotary brush cleaning & airflow testing.',
     images: [
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dryer Vent Cleaning Midlothian TX | Certified Local Pros',
+    title: 'Dryer Vent Cleaning Midlothian TX',
     description:
       'Restore airflow and protect your Midlothian home from dryer fire risks. Call (469) 336-3767 for free estimate.',
     images: [SITE_INFO.heroImage],

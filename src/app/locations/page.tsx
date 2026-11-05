@@ -23,7 +23,7 @@ import { CallToActionBanner } from '@/components/CallToActionBanner';
 import { InternalLink, ExternalLink } from '@/components/Links';
 
 export const metadata: Metadata = {
-  title: 'Dryer Vent Cleaning Service Areas | Midlothian & Surrounding Ellis County',
+  title: 'Dryer Vent Cleaning Service Areas Midlothian TX',
   description:
     'Professional dryer vent cleaning and lint removal across Midlothian, Waxahachie, Red Oak, Ovilla, and Cedar Hill, TX. Certified technicians, fast dispatch, free quotes.',
   alternates: {

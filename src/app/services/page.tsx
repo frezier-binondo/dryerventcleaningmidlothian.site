@@ -25,7 +25,7 @@ import { CallToActionBanner } from '@/components/CallToActionBanner';
 import { InternalLink, ExternalLink } from '@/components/Links';
 
 export const metadata: Metadata = {
-  title: 'Dryer Vent Services Midlothian TX | Cleaning, Repair, Installation & Testing',
+  title: 'Dryer Vent Services Midlothian TX',
   description:
     'Comprehensive dryer vent services in Midlothian, TX: cleaning, duct repair, new installation, rerouting, camera inspection, and commercial laundry maintenance. Call (469) 336-3767.',
   alternates: {

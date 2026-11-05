@@ -30,7 +30,7 @@ import { CallToActionBanner } from '@/components/CallToActionBanner';
 import { InternalLink, ExternalLink } from '@/components/Links';
 
 export const metadata: Metadata = {
-  title: 'Dryer Vent Cleaning Midlothian TX | Professional Lint Removal & Fire Safety',
+  title: 'Dryer Vent Cleaning Midlothian TX',
   description:
     'Top-rated dryer vent cleaning in Midlothian, TX. Prevent house fires, eliminate dangerous lint buildup, and cut drying time in half. Local Ellis County pros. Call (469) 336-3767 for a free quote.',
   alternates: {
